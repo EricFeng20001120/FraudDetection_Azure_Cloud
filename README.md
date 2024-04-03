@@ -90,3 +90,40 @@ Finally, **Power BI** connects to Azure Synapse to visualize the prediction resu
 - **Power BI**: Offers a sophisticated suite for creating interactive visualizations and reports based on the predictions made by the machine learning model.
 
 This cloud architecture is designed to be scalable and efficient, ensuring that data flows smoothly from model creation to insightful visualizations, all within a cohesive Azure environment.
+
+Certainly! Here's a "Results" section for a README file that discusses visualizations in Power BI, along with a standard license section:
+
+---
+
+## Results
+
+### Power BI Visualizations
+
+The analytics process culminates with a series of insightful visualizations in Power BI, showcasing the findings derived from our machine learning model's predictions.
+
+#### Time vs. Amount of Fraud
+
+One of our primary visualizations is a time series analysis that illustrates the frequency and amount of fraudulent transactions over time. This visualization allows us to detect patterns, such as specific time frames where fraud is more prevalent. By understanding these trends, businesses can allocate monitoring resources more effectively.
+
+![plot1](https://github.com/EricFeng20001120/FraudDetection_Azure_Cloud/blob/main/media/amount_vs_time.png)
+
+
+#### Location vs. Amount of Fraud
+
+Another critical visualization maps the amount of fraud against geographic locations. This geo-analysis helps to identify regions with higher incidences of fraudulent activities. Recognizing these hotspots is crucial for implementing region-specific countermeasures and for further understanding the geographic distribution of credit card fraud.
+
+![plot2](https://github.com/EricFeng20001120/FraudDetection_Azure_Cloud/blob/main/media/amount%20vs%20time.png)
+
+Both visualizations serve as key tools for stakeholders to understand the nuances of credit card fraud and to make data-driven decisions. The visualizations are interactive, allowing users to drill down into specific times and locations for a more detailed view.
+
+### License
+
+This project is made available under the MIT License. The terms of the license permit you to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+---
+
