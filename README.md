@@ -72,6 +72,8 @@ This dataset provides ISO3166-1 standard country codes and names, aiding in the 
 
 ## Overview of Cloud Architecture
 ![architecture](https://github.com/EricFeng20001120/FraudDetection_Azure_Cloud/blob/main/media/Cloud%20Architecture.png)
+
+
 The process begins within **Azure Machine Learning**, where a machine learning model is created and trained using Jupyter Notebooks. After training, the model is converted to the ONNX format to standardize and optimize it for high-performance inference in various environments. The model is then exported to Azure Blob Storage, a secure and scalable cloud storage solution.
 
 Once stored in **Blob Storage**, the model is ready to be registered with **Azure Synapse Analytics**. A SQL script is executed within Synapse to read the model from Blob Storage and load it into a dedicated SQL pool table. This enables the model to be stored within the Synapse environment for easy access and management.
