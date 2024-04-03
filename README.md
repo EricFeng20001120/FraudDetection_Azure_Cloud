@@ -68,3 +68,23 @@ This dataset provides ISO3166-1 standard country codes and names, aiding in the 
 | 5 | alpha2 | Two-letter Country Code | Two-letter ISO3166-1 country code. |
 | 6 | location | Location (JP) | Geographic location in Japanese. |
 | 7 | subdivision | Subdivision Code | ISO 3166-2 code for country subdivisions.
+
+
+## Overview of Cloud Architecture
+![The process for registering and using a model](media/Cloud Architecture.png")
+The process begins within **Azure Machine Learning**, where a machine learning model is created and trained using Jupyter Notebooks. After training, the model is converted to the ONNX format to standardize and optimize it for high-performance inference in various environments. The model is then exported to Azure Blob Storage, a secure and scalable cloud storage solution.
+
+Once stored in **Blob Storage**, the model is ready to be registered with **Azure Synapse Analytics**. A SQL script is executed within Synapse to read the model from Blob Storage and load it into a dedicated SQL pool table. This enables the model to be stored within the Synapse environment for easy access and management.
+
+With the model registered, the **use phase** within Azure Synapse Analytics comes into play. Additional SQL scripts are run to load data for prediction from existing tables, apply the model using the PREDICT function, and then insert the predictions back into the Synapse database. This creates a full loop of training to prediction within the Azure ecosystem.
+
+Finally, **Power BI** connects to Azure Synapse to visualize the prediction results. The powerful data visualization tools in Power BI enable stakeholders to interact with the predictions, extracting actionable insights and identifying trends and patterns critical for informed decision-making.
+
+### Key Components and Features
+
+- **Azure Machine Learning**: Utilized for developing and training the machine learning model with the added capability of easy conversion to ONNX format.
+- **Azure Blob Storage**: Acts as an intermediary, providing a secure location for storing the ONNX model.
+- **Azure Synapse Analytics**: Facilitates the operationalization of the machine learning model by loading it for batch scoring and managing the data workflow.
+- **Power BI**: Offers a sophisticated suite for creating interactive visualizations and reports based on the predictions made by the machine learning model.
+
+This cloud architecture is designed to be scalable and efficient, ensuring that data flows smoothly from model creation to insightful visualizations, all within a cohesive Azure environment.
